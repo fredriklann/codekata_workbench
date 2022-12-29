@@ -9,14 +9,16 @@
             const div = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header")
             
             const event_type = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.eapp-events-calendar-controls-component > div > div.jsx-695107531.eapp-events-calendar-filter-current > div")
-            await event_type.click();
+            event_type.click();
           
             
             const menuItem = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.eapp-events-calendar-controls-component > div > div.jsx-695107531.eapp-events-calendar-filter-modal.eapp-events-calendar-filter-show > div > div:nth-child(2)")
-            await menuItem.click();
+            menuItem.click();
+          
+            pause(2);
           
             const detailItem = getElementByXpath("xpath///*[@id="eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90"]/div/div[2]/div/div/div/div[1]/div/div[3]/div[2]")
-            await detailItem.click();
+            detailItem.click();
           
             const titleSpace = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.jsx-2825270663.eapp-events-calendar-events-calendar-title")
             titleSpace.remove()
