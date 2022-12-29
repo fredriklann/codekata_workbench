@@ -3,6 +3,14 @@
     <script type="text/javascript">
         function removeItems() {
             const div = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header")
+            
+            const event_type = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.eapp-events-calendar-controls-component > div > div.jsx-695107531.eapp-events-calendar-filter-current > div")
+            event_type.click();
+          
+            
+            const menuItem = document.querySelector("aria/Gudstjänst")
+            menuItem.click();
+            
             //div.remove()
         }
         window.onload = removeItems;
