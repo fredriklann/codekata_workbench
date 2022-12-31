@@ -1,4 +1,4 @@
-<HTML><BODY style="font-family: Arial"><script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<HTML><BODY onload="removeItems" style="font-family: Arial"><script src="https://apps.elfsight.com/p/platform.js" defer></script>
   
     <script type="text/javascript">
       function sleep(ms) {
@@ -11,25 +11,26 @@
             const div = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header")
             
             const event_type = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.eapp-events-calendar-controls-component > div > div.jsx-695107531.eapp-events-calendar-filter-current > div")
-            event_type.click();
+            if (event_type) { event_type.click(); }
           
             
             const menuItem = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.eapp-events-calendar-controls-component > div > div.jsx-695107531.eapp-events-calendar-filter-modal.eapp-events-calendar-filter-show > div > div:nth-child(2)")
-            menuItem.click();
+            if (event_type) { menuItem.click(); }
           
             sleep(500).then(() => {
               const detailItem = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-layout > div > div > div > div:nth-child(1) > div > div.jsx-817030697.eapp-events-calendar-grid-item-info > div.jsx-1165231371.eapp-events-calendar-name-component.eapp-events-calendar-grid-item-name")
               //const detailItem = getElementByXpath('xpath///*[@id="eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90"]/div/div[2]/div/div/div/div[1]/div/div[3]/div[2]')
-              detailItem.click();
+              if (detailItem) { detailItem.click(); }
             })
           
             
           
             const titleSpace = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header > div.jsx-2825270663.eapp-events-calendar-events-calendar-title")
-            titleSpace.remove()
+            if (titleSpace) { titleSpace.remove() }
             
             //div.remove()
         }
         window.onload = removeItems;
+        document.addEventListener('DOMContentLoaded', function() { removeItems}, false);
      </script>
 <div style="font-family: Arial" class="elfsight-app-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90"></div></BODY></HTML>
