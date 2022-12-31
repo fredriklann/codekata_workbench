@@ -1,9 +1,9 @@
-<HTML><BODY style="font-family: Arial"><script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<HTML><BODY onload="removeItems" style="font-family: Arial"><H1>Kyrkan i Enebyberg - kommande samlingar</H1><script src="https://apps.elfsight.com/p/platform.js" defer></script>
   
     <script type="text/javascript">
         function removeItems() {
             const div = document.querySelector("#eapps-events-calendar-eb4dfc3e-7391-4cf8-ae5d-6419c5137d90 > div > div.jsx-2825270663.eapp-events-calendar-events-calendar-header")
-            div.remove()
+            if (div) { div.remove() }
         }
       
       document.addEventListener('DOMContentLoaded', function() { removeItems}, false);
